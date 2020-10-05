@@ -1,11 +1,13 @@
 import React from "react";
-import { homeObjTwo } from "./Data";
-import { InfoSection } from "../../components";
+import { aboutObjOne, aboutObjTwo } from "./Data";
+import { BigInfoSection, SubHeading, CallToActionSec } from "../../components";
 
 const Home = () => {
   return (
     <>
-      <InfoSection {...homeObjTwo} />
+      <SubHeading {...aboutObjOne} />
+      <BigInfoSection {...aboutObjOne} />
+      <CallToActionSec {...aboutObjTwo} />
     </>
   );
 };

@@ -17,7 +17,7 @@ import {
   SectionHeadingTitle,
   SectionHeadingSubTitle,
 } from "../../globalStyles";
-const Services = (whiteTitle, goldTitle) => {
+const Services = ({ whiteTitle, goldTitle }) => {
   return (
     <ServicesContainer>
       <SectionHeading>
@@ -52,7 +52,7 @@ const Services = (whiteTitle, goldTitle) => {
         </ServiceBox>
         <ServiceBox>
           <BrandIcon />
-          <ServiceBoxTitle>Vizualni Identiet</ServiceBoxTitle>
+          <ServiceBoxTitle>Vizualni Identitet</ServiceBoxTitle>
           <ServiceBoxDesc>
             Vizuelni identitet je sistem vizuelne prezentacije putem reklamnih
             flajera, print i video reklama kroz koji se postiže prepoznatljivost

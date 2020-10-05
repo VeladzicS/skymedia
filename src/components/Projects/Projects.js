@@ -15,6 +15,7 @@ import {
   DarkOverlay,
   SlideContentAd,
   SlideContentHarba,
+  SlideContentVirino,
   ButtonContainer,
 } from "./Projects.elements";
 import {
@@ -42,16 +43,10 @@ const Projects = ({ goldTitle, buttonBig, buttonFontBig, primary }) => {
           spaceBetween={15}
           slidesPerView={1}
           loop={true}
-          navigation
           breakpoints={{
-            // when window width is >= 768px
-            768: {
-              width: 768,
-              slidesPerView: 2,
-            },
-            1000: {
+            620: {
               width: 1000,
-              slidesPerView: 3,
+              slidesPerView: 2,
             },
             1250: {
               width: 1250,
@@ -99,6 +94,21 @@ const Projects = ({ goldTitle, buttonBig, buttonFontBig, primary }) => {
                   </SlideContentLink>
                 </DarkOverlay>
               </SlideContentAd>
+            </SlideContent>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <SlideContent>
+              <SlideContentVirino>
+                <DarkOverlay>
+                  <SlideContentLink
+                    href={"https://virinoshop.com"}
+                    target="_blank"
+                  >
+                    Pogledaj Projekt
+                  </SlideContentLink>
+                </DarkOverlay>
+              </SlideContentVirino>
             </SlideContent>
           </SwiperSlide>
         </Swiper>

@@ -9,12 +9,12 @@ export const InfoSec = styled.div`
 
   @media screen and (max-width: 1345px) {
     padding: ${({ bigPadding }) =>
-      bigPadding ? "200px 0 150px 0 " : "150px 0"};
+      bigPadding ? "150px 0 50px 0 " : "50px 0 100px 0"};
   }
 
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 960px) {
     padding: ${({ bigPadding }) =>
-      bigPadding ? "150px 0 50px 0 " : "100px 0"};
+      bigPadding ? "100px 0 50px 0 " : "125px 0"};
   }
   @media screen and (max-width: 620px) {
     padding: ${({ bigPadding }) => (bigPadding ? "50px 0 " : "25px 0")};
@@ -79,7 +79,7 @@ export const TopLine = styled.div`
   letter-spacing: 1.4px;
   margin-bottom: 15px;
 
-  @media screen and (max-width: 620px) {
+  @media screen and (max-width: 1350px) {
     font-size: 2rem;
   }
 `;
@@ -90,7 +90,7 @@ export const Heading = styled.h1`
   line-height: 1.1;
   color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#1c2237")};
 
-  @media screen and (max-width: 966px) {
+  @media screen and (max-width: 1350px) {
     font-size: ${({ bigText }) => (bigText ? "4.5rem" : "3rem")};
   }
 
@@ -106,8 +106,10 @@ export const Subtitle = styled.p`
   color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1" : "#000")};
   text-align: left;
   font-family: "Playfair Display", serif;
-  @media screen and (max-width: 966px) {
+  @media screen and (max-width: 1350px) {
     font-size: ${({ bigSubText }) => (bigSubText ? "2rem" : "1.7rem")};
+  }
+  @media screen and (max-width: 960px) {
     text-align: center;
   }
 

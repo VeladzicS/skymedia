@@ -70,13 +70,27 @@ export const Container = styled.div`
   }
 `;
 
+export const ContainerInner = styled.div`
+  z-index: 1;
+  width: 100%;
+  max-width: 1600px;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin: 5rem auto;
+
+  @media screen and (max-width: 991px) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+`;
+
 export const Button = styled.button`
   border-radius: 4px;
   background: ${({ primary }) => (primary ? "#b69d74" : "#1f2839")};
   white-space: nowrap;
   padding: ${({ buttonBig }) => (buttonBig ? "14px 24px" : "10px 20px")};
   color: #fff;
-  font-size: ${({ buttonFontBig }) => (buttonFontBig ? "22px" : "16px")};
+  font-size: ${({ buttonFontBig }) => (buttonFontBig ? "20px" : "16px")};
   outline: none;
   border: none;
   cursor: pointer;
@@ -85,6 +99,7 @@ export const Button = styled.button`
     transition: all 0.3s ease-in-out;
     background: #fff;
     background: ${({ primary }) => (primary ? "#968568" : "#b69d74")};
+    transform: scale(1.1);
   }
 
   @media screen and (max-width: 960px) {
@@ -120,17 +135,29 @@ export const SectionHeading = styled.div`
   justify-content: center;
   align-items: center;
   margin: 5rem 0;
+  text-align: center;
+  padding: 0 1rem;
 `;
 
 export const SectionHeadingTitle = styled.h2`
   font-size: 3.5rem;
   color: ${({ whiteTitle }) => (whiteTitle ? "#fff" : "#192236")};
   margin: 1rem 0;
+  @media screen and (max-width: 620px) {
+    font-size: 3rem;
+  }
 `;
 export const SectionHeadingSubTitle = styled.h5`
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 600;
   color: ${({ goldTitle }) => (goldTitle ? "#b69d74" : "#192236")};
+`;
+export const Underline = styled.div`
+  width: 10rem;
+  height: 0.3rem;
+  background: ${({ goldUnderline }) => (goldUnderline ? "#b69d74" : "#192236")};
+  margin: 0.5rem auto;
+  transition: all 0.5s linear;
 `;
 
 export const Mail = styled(FaEnvelope)`

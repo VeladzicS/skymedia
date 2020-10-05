@@ -4,6 +4,7 @@ import { Container } from "../../globalStyles";
 import inesaImg from "../../assets/images/home/inesa.png";
 import harbaImg from "../../assets/images/home/harba.png";
 import adImg from "../../assets/images/home/ad.jpg";
+import virinoImg from "../../assets/images/home/virino.png";
 
 export const ProjectsContainer = styled.div`
   width: 100%;
@@ -12,17 +13,7 @@ export const ProjectsContainer = styled.div`
 `;
 
 export const ProjectsInner = styled(Container)`
-  max-width: 120rem;
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
-  @media screen and (min-width: 1000px) {
-    width: 1000px;
-  }
-  @media screen and (min-width: 1250px) {
-    width: 1250px;
-  }
+  max-width: 135rem;
 
   ${Container}
 `;
@@ -40,14 +31,14 @@ export const DarkOverlay = styled.div`
 export const SlideContentLink = styled.a`
   font-family: "Playfair Display", serif;
   text-decoration: none;
-  font-size: 2.8rem;
-  width: 100%;
+  font-size: 2.4rem;
+
   letter-spacing: 0.2px;
   color: #b69d74;
   position: absolute;
   bottom: -25%;
-  left: 100%;
-  transform: translate(-75%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   transition: all 0.5s ease-in-out;
 
   &:hover {
@@ -57,8 +48,8 @@ export const SlideContentLink = styled.a`
 `;
 
 export const SlideContent = styled.div`
-  width: 40rem;
-  height: 30rem;
+  width: 100%;
+  height: 25rem;
   position: relative;
   cursor: move;
   cursor: grab;
@@ -93,6 +84,11 @@ export const SlideContentAd = styled.div`
   width: 100%;
   height: 100%;
   background: url(${adImg}) center/cover no-repeat;
+`;
+export const SlideContentVirino = styled.div`
+  width: 100%;
+  height: 100%;
+  background: url(${virinoImg}) center/cover no-repeat;
 `;
 
 export const ButtonContainer = styled.div`

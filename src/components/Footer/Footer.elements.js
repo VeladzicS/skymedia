@@ -131,7 +131,7 @@ export const BottomBar = styled.div`
 export const WebsiteRights = styled.p`
   font-size: 12px;
   color: #fff;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem;
 `;
 
 export const SocialItem = styled.a`

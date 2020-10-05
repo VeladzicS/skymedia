@@ -1,5 +1,10 @@
 export { default as Navbar } from "./Navbar/Navbar";
+export { default as SubHeading } from "./SubHeading/SubHeading";
 export { default as InfoSection } from "./InfoSection/InfoSection";
+export { default as BigInfoSection } from "./BigInfoSection/BigInfoSection";
+export { default as CallToActionSec } from "./CallToActionSec/CallToActionSec";
+export { default as SingleProject } from "./SingleProject/SingleProject";
+export { default as YouTubeShare } from "./YouTubeShare/YouTubeShare";
 export { default as InfoBoxes } from "./InfoBoxes/InfoBoxes";
 export { default as Services } from "./Services/Services";
 export { default as Projects } from "./Projects/Projects";
