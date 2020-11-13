@@ -108,7 +108,7 @@ const InfoSection = ({
               </TextWrapper>
             </InfoColumn>
             <InfoColumn>
-              <ImgWrapper start={start} noMobile={noMobile} data-aos="fade-up">
+              <ImgWrapper start={start} noMobile={noMobile}>
                 <Player
                   autoplay
                   loop
