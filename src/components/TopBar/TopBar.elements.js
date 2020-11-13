@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { ThemeColors } from "../../theme";
+
+const { blue } = ThemeColors;
 
 export const TopBarContainer = styled.div`
   background: #192236;
@@ -43,7 +46,7 @@ export const MailText = styled.span`
   margin: 0 1rem;
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: #b69d74;
+    color: ${blue};
   }
   @media screen and (max-width: 620px) {
     display: none;
@@ -62,7 +65,7 @@ export const PhoneText = styled.span`
   margin: 0 1rem;
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: #b69d74;
+    color: ${blue};
   }
   @media screen and (max-width: 620px) {
     display: none;

@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
+import translate from "../../providers/i18n/translate";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import {
   BigInfoSectionCont,
   SectionDescription,
@@ -7,10 +10,13 @@ import {
   HeroWrapper,
 } from "./BigInfoSection.elements";
 
-const BigInfoSection = ({ img, sectionText, sectionTextTwo }) => {
+const BigInfoSection = ({ img, sectionText, sectionTextTwo, imgStart }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   return (
-    <BigInfoSectionCont>
-      <HeroWrapper>
+    <BigInfoSectionCont imgStart={imgStart}>
+      <HeroWrapper data-aos="fade-up">
         <Player
           autoplay
           loop
@@ -27,9 +33,9 @@ const BigInfoSection = ({ img, sectionText, sectionTextTwo }) => {
         />
       </HeroWrapper>
 
-      <SectionDescription>
-        <SectionText>{sectionText}</SectionText>
-        <SectionText>{sectionTextTwo}</SectionText>
+      <SectionDescription data-aos="fade-up">
+        <SectionText>{translate(sectionText)}</SectionText>
+        <SectionText>{translate(sectionTextTwo)}</SectionText>
       </SectionDescription>
     </BigInfoSectionCont>
   );

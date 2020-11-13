@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import { Container } from "../../globalStyles";
-
+import { ThemeColors } from "../../theme";
 import inesaImg from "../../assets/images/home/inesa.png";
 import harbaImg from "../../assets/images/home/harba.png";
 import adImg from "../../assets/images/home/ad.jpg";
 import virinoImg from "../../assets/images/home/virino.png";
+
+const { blue, blueHover } = ThemeColors;
 
 export const ProjectsContainer = styled.div`
   width: 100%;
@@ -21,7 +23,7 @@ export const ProjectsInner = styled(Container)`
 export const DarkOverlay = styled.div`
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
   position: absolute;
   top: 0;
   left: 0;
@@ -34,7 +36,7 @@ export const SlideContentLink = styled.a`
   font-size: 2.4rem;
 
   letter-spacing: 0.2px;
-  color: #b69d74;
+  color: ${blue};
   position: absolute;
   bottom: -25%;
   left: 50%;
@@ -43,7 +45,11 @@ export const SlideContentLink = styled.a`
 
   &:hover {
     text-decoration: none;
-    color: rgba(182, 157, 116, 0.6);
+    color: ${blueHover};
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 2rem;
   }
 `;
 

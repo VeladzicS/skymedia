@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import SwiperCore, { Navigation, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import translate from "../../providers/i18n/translate";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import {
   ProjectsContainer,
   SlideContent,
@@ -28,15 +31,18 @@ import {
 SwiperCore.use([Navigation, A11y]);
 
 const Projects = ({ goldTitle, buttonBig, buttonFontBig, primary }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   return (
     <ProjectsContainer>
       <ProjectsInner>
-        <SectionHeading>
+        <SectionHeading data-aos="fade-up">
           <SectionHeadingSubTitle goldTitle={goldTitle}>
-            Naši Projekti
+            {translate("homePortfolio.topline")}
           </SectionHeadingSubTitle>
           <SectionHeadingTitle whiteTitle={false}>
-            Portfolio
+            {translate("homePortfolio.heading")}
           </SectionHeadingTitle>
         </SectionHeading>
         <Swiper
@@ -53,6 +59,7 @@ const Projects = ({ goldTitle, buttonBig, buttonFontBig, primary }) => {
               slidesPerView: 3,
             },
           }}
+          data-aos="fade-right"
         >
           <SwiperSlide>
             <SlideContent>
@@ -62,7 +69,7 @@ const Projects = ({ goldTitle, buttonBig, buttonFontBig, primary }) => {
                     href={"https://artinesa.com/"}
                     target="_blank"
                   >
-                    Pogledaj Projekt
+                    {translate("homePortfolio.hoverText")}
                   </SlideContentLink>
                 </DarkOverlay>
               </SlideContentInesa>
@@ -76,7 +83,7 @@ const Projects = ({ goldTitle, buttonBig, buttonFontBig, primary }) => {
                     href={"https://petvetbihac.com/"}
                     target="_blank"
                   >
-                    Pogledaj Projekt
+                    {translate("homePortfolio.hoverText")}
                   </SlideContentLink>
                 </DarkOverlay>
               </SlideContentHarba>
@@ -90,7 +97,7 @@ const Projects = ({ goldTitle, buttonBig, buttonFontBig, primary }) => {
                     href={"https://ad3london.com/"}
                     target="_blank"
                   >
-                    Pogledaj Projekt
+                    {translate("homePortfolio.hoverText")}
                   </SlideContentLink>
                 </DarkOverlay>
               </SlideContentAd>
@@ -105,7 +112,7 @@ const Projects = ({ goldTitle, buttonBig, buttonFontBig, primary }) => {
                     href={"https://virinoshop.com"}
                     target="_blank"
                   >
-                    Pogledaj Projekt
+                    {translate("homePortfolio.hoverText")}
                   </SlideContentLink>
                 </DarkOverlay>
               </SlideContentVirino>
@@ -113,13 +120,14 @@ const Projects = ({ goldTitle, buttonBig, buttonFontBig, primary }) => {
           </SwiperSlide>
         </Swiper>
         <ButtonContainer>
-          <Link to="/projects">
+          <Link to="/portfolio">
             <Button
               buttonBig={buttonBig}
               buttonFontBig={buttonFontBig}
               primary={primary}
+              data-aos="fade-up"
             >
-              Pogledaj sve projekte
+              {translate("homePortfolio.buttonOne")}
             </Button>
           </Link>
         </ButtonContainer>

@@ -1,11 +1,15 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+
 import { Container } from "../../globalStyles";
 import { MdImportantDevices } from "react-icons/md";
 import { FaShoppingCart, FaVideo } from "react-icons/fa";
 import { ImStatsDots } from "react-icons/im";
 import { BiSupport } from "react-icons/bi";
 import { GiChessKing } from "react-icons/gi";
+
+import { ThemeColors } from "../../theme";
+
+const { blue } = ThemeColors;
 
 export const ServicesContainer = styled.div`
   width: 100%;
@@ -33,7 +37,7 @@ export const ServicesInner = styled(Container)`
 `;
 
 export const ServiceBoxTitle = styled.h4`
-  color: #b69d74;
+  color: ${blue};
   font-size: 2rem;
 
   position: absolute;
@@ -64,7 +68,7 @@ export const ServiceBoxDesc = styled.p`
 `;
 
 export const WebIcon = styled(MdImportantDevices)`
-  color: #b69d74;
+  color: ${blue};
   font-size: 5rem;
   position: absolute;
   top: 4rem;
@@ -76,7 +80,7 @@ export const WebIcon = styled(MdImportantDevices)`
   }
 `;
 export const ShopIcon = styled(FaShoppingCart)`
-  color: #b69d74;
+  color: ${blue};
   font-size: 5rem;
   position: absolute;
   top: 4rem;
@@ -88,7 +92,7 @@ export const ShopIcon = styled(FaShoppingCart)`
   }
 `;
 export const BrandIcon = styled(GiChessKing)`
-  color: #b69d74;
+  color: ${blue};
   font-size: 5rem;
   position: absolute;
   top: 4rem;
@@ -100,7 +104,7 @@ export const BrandIcon = styled(GiChessKing)`
   }
 `;
 export const VideoIcon = styled(FaVideo)`
-  color: #b69d74;
+  color: ${blue};
   font-size: 5rem;
   position: absolute;
   top: 4rem;
@@ -112,7 +116,7 @@ export const VideoIcon = styled(FaVideo)`
   }
 `;
 export const MarketingIcon = styled(ImStatsDots)`
-  color: #b69d74;
+  color: ${blue};
   font-size: 5rem;
   position: absolute;
   top: 4rem;
@@ -124,7 +128,7 @@ export const MarketingIcon = styled(ImStatsDots)`
   }
 `;
 export const SupportIcon = styled(BiSupport)`
-  color: #b69d74;
+  color: ${blue};
   font-size: 5rem;
   position: absolute;
   top: 4rem;
@@ -136,7 +140,7 @@ export const SupportIcon = styled(BiSupport)`
   }
 `;
 
-export const ServiceBox = styled(Link)`
+export const ServiceBox = styled.div`
   text-decoration: none;
   height: 35rem;
   margin: 0.5rem;
@@ -151,7 +155,7 @@ export const ServiceBox = styled(Link)`
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    background: #b69d74;
+    background: ${blue};
   }
 
   &:hover ${ServiceBoxTitle} {

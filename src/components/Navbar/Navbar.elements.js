@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { ThemeColors } from "../../theme";
 import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
+
+const { blue, blueHover } = ThemeColors;
 
 export const Nav = styled.nav`
   background: ${({ scrolled }) => (scrolled ? "#1f2839" : "transparent")};
@@ -78,12 +81,25 @@ export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
   transition: all 0.5s ease;
   &:hover {
-    border-bottom: 2px solid #b69d74;
+    border-bottom: 2px solid ${blue};
   }
 
   @media screen and (max-width: 960px) {
     width: 100%;
     border: none;
+    &:hover {
+      border: none;
+    }
+  }
+`;
+
+export const NavItemLang = styled.li`
+  height: 80px;
+  padding-left: 40px;
+  @media screen and (max-width: 960px) {
+    width: 100%;
+    border: none;
+    padding: 0;
     &:hover {
       border: none;
     }
@@ -109,7 +125,7 @@ export const NavLinks = styled(Link)`
     display: table;
 
     &:hover {
-      color: #b69d74;
+      color: ${blueHover};
       transition: all 0.3s ease;
     }
   }

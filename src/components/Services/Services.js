@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import translate from "../../providers/i18n/translate";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import {
   ServicesContainer,
   ServicesInner,
@@ -18,75 +21,54 @@ import {
   SectionHeadingSubTitle,
 } from "../../globalStyles";
 const Services = ({ whiteTitle, goldTitle }) => {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   return (
     <ServicesContainer>
-      <SectionHeading>
+      <SectionHeading data-aos="fade-up">
         <SectionHeadingSubTitle goldTitle={goldTitle}>
-          Šta nudimo?
+          {translate("services.title")}
         </SectionHeadingSubTitle>
         <SectionHeadingTitle whiteTitle={whiteTitle}>
-          Naše Usluge
+          {translate("services.topTitle")}
         </SectionHeadingTitle>
       </SectionHeading>
 
       <ServicesInner>
-        <ServiceBox to="/about">
+        <ServiceBox data-aos="fade-left">
           <WebIcon />
-          <ServiceBoxTitle>Dizajn & Izrada Web Stranica </ServiceBoxTitle>
-          <ServiceBoxDesc>
-            Svaka web stranica koju izradimo radi besprijekorno na mobilnim
-            uređajima i tabletima, a iz razloga što koristimo najmodernije
-            tehnike optimizovanog razvoja CSS/JS tehnologija. Naš dizajn je
-            moderan i efektivan.
-          </ServiceBoxDesc>
+          <ServiceBoxTitle>{translate("services.dizajnTitle")}</ServiceBoxTitle>
+          <ServiceBoxDesc>{translate("services.dizajnText")}</ServiceBoxDesc>
         </ServiceBox>
-        <ServiceBox>
+        <ServiceBox data-aos="fade-up">
           <ShopIcon />
-          <ServiceBoxTitle>Web Shop</ServiceBoxTitle>
-          <ServiceBoxDesc>
-            Mi nudimo najefikasnije, sigurne e-commerc sisteme kao jedan od
-            naših servisa. U mogućnosti smo prilagoditi postojeće e-commerce
-            sisteme kao što je WoCommerce da radi u harmoniji sa vašim modelom
-            poslovanja.
-          </ServiceBoxDesc>
+          <ServiceBoxTitle>{translate("services.shopTitle")}</ServiceBoxTitle>
+          <ServiceBoxDesc>{translate("services.shopText")}</ServiceBoxDesc>
         </ServiceBox>
-        <ServiceBox>
+        <ServiceBox data-aos="fade-right">
           <BrandIcon />
-          <ServiceBoxTitle>Vizualni Identitet</ServiceBoxTitle>
-          <ServiceBoxDesc>
-            Vizuelni identitet je sistem vizuelne prezentacije putem reklamnih
-            flajera, print i video reklama kroz koji se postiže prepoznatljivost
-            i razvijanje brenda vaše firme.
-          </ServiceBoxDesc>
+          <ServiceBoxTitle>{translate("services.visualTitle")}</ServiceBoxTitle>
+          <ServiceBoxDesc>{translate("services.visualText")}</ServiceBoxDesc>
         </ServiceBox>
-        <ServiceBox>
+        <ServiceBox data-aos="fade-left">
           <MarketingIcon />
-          <ServiceBoxTitle>Digitalni Marketing</ServiceBoxTitle>
-          <ServiceBoxDesc>
-            Google i Facebook generiraju više profita nego neke tradicionalne
-            medijske kuće, a iz razloga što imaju pristup većem broju očiju. Iz
-            tog razloga je digitalni marketing bitan i gdje bi fokus svakog
-            poslovanja trebao da bude.
-          </ServiceBoxDesc>
+          <ServiceBoxTitle>
+            {translate("services.digitalTitle")}
+          </ServiceBoxTitle>
+          <ServiceBoxDesc>{translate("services.digitalText")}</ServiceBoxDesc>
         </ServiceBox>
-        <ServiceBox>
+        <ServiceBox data-aos="fade-up">
           <VideoIcon />
-          <ServiceBoxTitle>Video & Animacije</ServiceBoxTitle>
-          <ServiceBoxDesc>
-            Svaki video koji pravimo je pravljen za specifične potrebe i sa
-            ciljem koji postavi klijent. Naš besprijekorni pristup radu u kojem
-            stremimo da svaka animacija bude u skladu sa vašim brendom.
-          </ServiceBoxDesc>
+          <ServiceBoxTitle> {translate("services.videoTitle")}</ServiceBoxTitle>
+          <ServiceBoxDesc>{translate("services.videoText")}</ServiceBoxDesc>
         </ServiceBox>
-        <ServiceBox>
+        <ServiceBox data-aos="fade-right">
           <SupportIcon />
-          <ServiceBoxTitle>Održavanje & Podrška</ServiceBoxTitle>
-          <ServiceBoxDesc>
-            Nakon što je proizvod razvijen, pružamo usluge dugotrajnog
-            održavanja i tehničku podršku. Možemo nastaviti raditi na novim
-            značajkama vašeg proizvoda, baviti se vašim pitanjima i novim
-            problemima, kao i razvijati i provoditi poboljšanja.
-          </ServiceBoxDesc>
+          <ServiceBoxTitle>
+            {translate("services.podrskaTitle")}
+          </ServiceBoxTitle>
+          <ServiceBoxDesc>{translate("services.podrskaText")}</ServiceBoxDesc>
         </ServiceBox>
       </ServicesInner>
     </ServicesContainer>

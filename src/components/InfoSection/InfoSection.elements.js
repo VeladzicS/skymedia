@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import backImage from "../../assets/images/home/back.jpg";
+import backImage from "../../assets/images/home/one.jpg";
+
+import { ThemeColors } from "../../theme";
+
+const { blue, grey, oldBlue } = ThemeColors;
 
 export const InfoSec = styled.div`
   padding: ${({ bigPadding }) =>
@@ -13,8 +17,7 @@ export const InfoSec = styled.div`
   }
 
   @media screen and (max-width: 960px) {
-    padding: ${({ bigPadding }) =>
-      bigPadding ? "100px 0 50px 0 " : "125px 0"};
+    padding: ${({ bigPadding }) => (bigPadding ? "100px 0 50px 0 " : "25px 0")};
   }
   @media screen and (max-width: 620px) {
     padding: ${({ bigPadding }) => (bigPadding ? "50px 0 " : "25px 0")};
@@ -30,7 +33,8 @@ export const InfoSecBcg = styled.div`
   width: auto;
   height: auto;
   z-index: -1;
-  background: url(${backImage}) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)),
+    url(${backImage}) no-repeat;
   background-size: cover;
 `;
 
@@ -72,8 +76,16 @@ export const TextWrapper = styled.div`
   }
 `;
 
+export const ButtonContainer = styled.div`
+  display: flex;
+
+  @media screen and (max-width: 960px) {
+    justify-content: center;
+  }
+`;
+
 export const TopLine = styled.div`
-  color: ${({ lightTopLine }) => (lightTopLine ? "#b69d74;" : "#b69d74;")};
+  color: ${({ lightTopLine }) => (lightTopLine ? blue : "#b69d74;")};
   font-size: 2.5rem;
   line-height: 20px;
   letter-spacing: 1.4px;
@@ -82,13 +94,17 @@ export const TopLine = styled.div`
   @media screen and (max-width: 1350px) {
     font-size: 2rem;
   }
+
+  @media screen and (max-width: 520px) {
+    font-size: 1.8rem;
+  }
 `;
 
 export const Heading = styled.h1`
   margin-bottom: 24px;
   font-size: ${({ bigText }) => (bigText ? "6rem" : "4rem")};
   line-height: 1.1;
-  color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#1c2237")};
+  color: ${({ lightText }) => (lightText ? grey : oldBlue)};
 
   @media screen and (max-width: 1350px) {
     font-size: ${({ bigText }) => (bigText ? "4.5rem" : "3rem")};
@@ -97,13 +113,16 @@ export const Heading = styled.h1`
   @media screen and (max-width: 620px) {
     font-size: ${({ bigText }) => (bigText ? "3.5rem" : "2.5rem")};
   }
+  @media screen and (max-width: 520px) {
+    font-size: ${({ bigText }) => (bigText ? "3rem" : "2.5rem")};
+  }
 `;
 
 export const Subtitle = styled.p`
   max-width: 640px;
   margin-bottom: 35px;
   font-size: ${({ bigSubText }) => (bigSubText ? "2.2rem" : "1.7rem")};
-  color: ${({ lightTextDesc }) => (lightTextDesc ? "#a9b3c1" : "#000")};
+  color: ${({ lightTextDesc }) => (lightTextDesc ? grey : "#000")};
   text-align: left;
   font-family: "Playfair Display", serif;
   @media screen and (max-width: 1350px) {
@@ -111,10 +130,15 @@ export const Subtitle = styled.p`
   }
   @media screen and (max-width: 960px) {
     text-align: center;
+    display: ${({ noDisplay }) => (noDisplay ? "none" : "block")};
   }
 
   @media screen and (max-width: 620px) {
     font-size: ${({ bigSubText }) => (bigSubText ? "1.8rem" : "1.5rem")};
+  }
+
+  @media screen and (max-width: 520px) {
+    font-size: ${({ bigSubText }) => (bigSubText ? "1.7rem" : "1.5rem")};
   }
 `;
 

@@ -1,7 +1,7 @@
-import React from "react";
-import successIcon from "../../assets/images/icons/1.png";
-import effIcon from "../../assets/images/icons/2.png";
-import recoIcon from "../../assets/images/icons/3.png";
+import React, { useEffect } from "react";
+import translate from "../../providers/i18n/translate";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import {
   InfoBoxContainer,
   InfoBoxItem,
@@ -9,44 +9,41 @@ import {
   InfoBoxTitle,
   InfoBoxText,
   InfoBoxIcon,
+  SuccessIcon,
+  ThumbsIcon,
+  TimerIcon,
 } from "./InfoBoxes.elements";
 const InfoBoxes = (props) => {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
   return (
     <InfoBoxContainer infoBoxDisplay={props.infoBoxDisplay}>
-      <InfoBoxItem>
+      <InfoBoxItem data-aos="fade-left">
         <InfoBoxIcon>
-          <img src={successIcon} alt="Logo" />
+          <SuccessIcon />
         </InfoBoxIcon>
         <InfoBoxContentDiv>
-          <InfoBoxTitle>100% Uspješnost</InfoBoxTitle>
-          <InfoBoxText>
-            Ne prihvatamo projekt ako nismo sigurni da ga možemo na vrijeme u
-            potpunosti završiti.
-          </InfoBoxText>
+          <InfoBoxTitle>{translate("boxOne.titleOne")}</InfoBoxTitle>
+          <InfoBoxText>{translate("boxOne.textOne")}</InfoBoxText>
         </InfoBoxContentDiv>
       </InfoBoxItem>
-      <InfoBoxItem>
+      <InfoBoxItem className="infoBoxActive" data-aos="fade-up">
         <InfoBoxIcon>
-          <img src={effIcon} alt="Logo" />
+          <TimerIcon />
         </InfoBoxIcon>
         <InfoBoxContentDiv>
-          <InfoBoxTitle>Efikasnost</InfoBoxTitle>
-          <InfoBoxText>
-            Apsolutno smo fokusirani na svaki novi projekt, te radimo sa
-            strašću, jer stvarno volimo ono što radimo.
-          </InfoBoxText>
+          <InfoBoxTitle>{translate("boxTwo.titleTwo")}</InfoBoxTitle>
+          <InfoBoxText>{translate("boxTwo.textTwo")}</InfoBoxText>
         </InfoBoxContentDiv>
       </InfoBoxItem>
-      <InfoBoxItem>
+      <InfoBoxItem data-aos="fade-right">
         <InfoBoxIcon>
-          <img src={recoIcon} alt="Logo" />
+          <ThumbsIcon />
         </InfoBoxIcon>
         <InfoBoxContentDiv>
-          <InfoBoxTitle>Preporuke</InfoBoxTitle>
-          <InfoBoxText>
-            Naši projekti govore sami za sebe, ali ako to nije dovoljno možete
-            pogledati šta klijenti kažu za nas.
-          </InfoBoxText>
+          <InfoBoxTitle>{translate("boxThree.titleThree")}</InfoBoxTitle>
+          <InfoBoxText>{translate("boxThree.textThree")}</InfoBoxText>
         </InfoBoxContentDiv>
       </InfoBoxItem>
     </InfoBoxContainer>

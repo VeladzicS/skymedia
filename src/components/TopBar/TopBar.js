@@ -22,7 +22,7 @@ const TopBar = () => {
           </MailTextLink>
 
           <PhoneTextLink href={"tel:00387603411530"} target="_blank">
-            <Phone /> <PhoneText>+387 60 3411530</PhoneText>
+            <Phone /> <PhoneText>+387 61 368 464</PhoneText>
           </PhoneTextLink>
         </ContactBar>
       </TopBarContacts>
@@ -31,10 +31,16 @@ const TopBar = () => {
         <SocialItem href={"#"} target="_blank">
           <Facebook />
         </SocialItem>
-        <SocialItem href={"#"} target="_blank">
+        <SocialItem
+          href={"https://www.youtube.com/channel/UC5i-hFeViksvqeVtVUf0wDw"}
+          target="_blank"
+        >
           <Youtube />
         </SocialItem>
-        <SocialItem href={"#"} target="_blank">
+        <SocialItem
+          href={"https://www.instagram.com/skymedia.dev/"}
+          target="_blank"
+        >
           <Instagram />
         </SocialItem>
       </SocialItems>

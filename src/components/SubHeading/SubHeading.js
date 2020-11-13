@@ -1,5 +1,6 @@
 import React from "react";
 import { SubHeadingContainer } from "./SubHeading.elements";
+import translate from "../../providers/i18n/translate";
 import {
   SectionHeading,
   SectionHeadingTitle,
@@ -18,10 +19,10 @@ const SubHeading = ({
     <SubHeadingContainer>
       <SectionHeading>
         <SectionHeadingSubTitle goldTitle={goldTitle}>
-          {topTitle}
+          {translate(topTitle)}
         </SectionHeadingSubTitle>
         <SectionHeadingTitle whiteTitle={whiteTitle}>
-          {pageTitle}
+          {translate(pageTitle)}
         </SectionHeadingTitle>
         <Underline goldUnderline={goldUnderline} />
       </SectionHeading>

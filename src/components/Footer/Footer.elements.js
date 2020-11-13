@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { ThemeColors } from "../../theme";
+
+const { blue } = ThemeColors;
 
 export const FooterContainer = styled.div`
   background-color: #1f2839;
@@ -21,7 +24,7 @@ export const FooterContact = styled.section`
   color: #fff;
 `;
 
-export const FooterLogo = styled(Link)`
+export const FooterLogo = styled.div`
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -102,7 +105,7 @@ export const FooterLinksItems = styled.div`
 
 export const FooterLinkTitle = styled.h2`
   margin-bottom: 16px;
-  color: #b69d74;
+  color: ${blue};
 `;
 
 export const FooterLink = styled(Link)`
@@ -112,7 +115,19 @@ export const FooterLink = styled(Link)`
   font-size: 14px;
 
   &:hover {
-    color: #b69d74;
+    color: ${blue};
+    transition: 0.3 ease-in-out;
+  }
+`;
+
+export const FooterNormalLink = styled.a`
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+
+  &:hover {
+    color: ${blue};
     transition: 0.3 ease-in-out;
   }
 `;

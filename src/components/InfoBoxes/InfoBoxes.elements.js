@@ -1,18 +1,25 @@
 import styled from "styled-components";
+import { ThemeColors } from "../../theme";
+import { GiBullseye } from "react-icons/gi";
+import { MdAvTimer } from "react-icons/md";
+import { FiThumbsUp } from "react-icons/fi";
+
+const { blue } = ThemeColors;
 
 export const InfoBoxContainer = styled.div`
   display: ${({ infoBoxDisplay }) => (infoBoxDisplay ? "flex" : "none")};
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: -25%;
+  bottom: -30%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   @media screen and (max-width: 1578px) {
     transform: translate(-50%, -35%);
   }
 
-  @media screen and (max-width: 992px) {
+  @media screen and (max-width: 960px) {
     display: none;
   }
 `;
@@ -33,7 +40,7 @@ export const InfoBoxItem = styled.div`
   background: #1f2839;
   display: flex;
   align-items: flex-start;
-
+  min-height: 230px;
   width: 45rem;
   padding: 3rem;
   transition: all 0.3s ease-in-out;
@@ -58,7 +65,7 @@ export const InfoBoxItem = styled.div`
   }
 
   &:hover ${InfoBoxTitle} {
-    color: #b69d74;
+    color: ${blue};
   }
 `;
 
@@ -86,13 +93,30 @@ export const InfoBoxText = styled.p`
 
 export const InfoBoxIcon = styled.div`
   margin-right: 1rem;
-  & img {
-    width: 50px;
-    height: auto;
-    color: #b69d74;
+`;
 
-    @media screen and (max-width: 1086px) {
-      width: 40px;
-    }
+export const SuccessIcon = styled(GiBullseye)`
+  color: ${blue};
+  font-size: 5rem;
+  transition: all 0.3s ease-in-out;
+  @media screen and (max-width: 1260px) {
+    font-size: 4rem;
+  }
+`;
+
+export const TimerIcon = styled(MdAvTimer)`
+  color: ${blue};
+  font-size: 5rem;
+  transition: all 0.3s ease-in-out;
+  @media screen and (max-width: 1260px) {
+    font-size: 4rem;
+  }
+`;
+export const ThumbsIcon = styled(FiThumbsUp)`
+  color: ${blue};
+  font-size: 5rem;
+  transition: all 0.3s ease-in-out;
+  @media screen and (max-width: 1260px) {
+    font-size: 4rem;
   }
 `;

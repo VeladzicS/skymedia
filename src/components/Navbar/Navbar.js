@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import skyLogo from "../../assets/images/logo/logoLight.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-import { Button } from "../../globalStyles";
+import { LangSwitcher } from "../index";
+import translate from "../../providers/i18n/translate";
 import {
   Nav,
   NavbarContainer,
@@ -11,8 +12,7 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
-  NavItemBtn,
-  NavBtnLink,
+  NavItemLang,
 } from "./Navbar.elements";
 
 const Navbar = () => {
@@ -61,31 +61,20 @@ const Navbar = () => {
 
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                <NavLinks to="/">Početna</NavLinks>
+                <NavLinks to="/">{translate("menu.one")}</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/about">O nama</NavLinks>
+                <NavLinks to="/about">{translate("menu.two")}</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/portfolio">Portfolio</NavLinks>
+                <NavLinks to="/portfolio">{translate("menu.three")}</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/contact">Kontakt</NavLinks>
+                <NavLinks to="/contact">{translate("menu.four")}</NavLinks>
               </NavItem>
-
-              <NavItemBtn>
-                {button ? (
-                  <NavBtnLink to="/showreel">
-                    <Button primary> Showreel </Button>
-                  </NavBtnLink>
-                ) : (
-                  <NavBtnLink to="/showreel">
-                    <Button fontBig primary big>
-                      Showreel
-                    </Button>
-                  </NavBtnLink>
-                )}
-              </NavItemBtn>
+              <NavItemLang>
+                <LangSwitcher />
+              </NavItemLang>
             </NavMenu>
           </NavbarContainer>
         </Nav>

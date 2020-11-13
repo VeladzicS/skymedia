@@ -1,20 +1,32 @@
-import React from "react";
-import { YouTubeCont } from "./YouTubeShare.elements";
-import YouTube from "react-youtube";
+import React, { useState } from "react";
+import ModalVideo from "react-modal-video";
+import { AltButton } from "../../globalStyles";
+import translate from "../../providers/i18n/translate";
 
-const YouTubeShare = () => {
-  const opts = {
-    height: "390",
-    width: "100%",
-    playerVars: {
-      autoplay: 0,
-    },
+const YouTubeShare = ({ primary, noShowReel }) => {
+  const [isOpen, setOpen] = useState(false);
+  let buttonStyle = {
+    marginLeft: "20px",
   };
-
   return (
-    <YouTubeCont>
-      <YouTube videoId="QeOW2qtoVfs" opts={opts} />
-    </YouTubeCont>
+    <React.Fragment>
+      <ModalVideo
+        channel="youtube"
+        autoplay
+        isOpen={isOpen}
+        videoId="sJyyzwHO4u4"
+        onClose={() => setOpen(false)}
+      />
+
+      <AltButton
+        primary={primary}
+        noShowReel={noShowReel}
+        style={buttonStyle}
+        onClick={() => setOpen(true)}
+      >
+        {translate("aboutPage.ctaButton")}
+      </AltButton>
+    </React.Fragment>
   );
 };
 

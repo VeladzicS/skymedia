@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { ThemeColors } from "./theme";
 import {
   FaEnvelope,
   FaPhoneSquare,
@@ -7,6 +8,8 @@ import {
   FaYoutube,
   FaArrowRight,
 } from "react-icons/fa";
+
+const { blue, grey, blueHover } = ThemeColors;
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -40,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     line-height: 1.6;
-    color: #0000;
+    color: #000;
  
  
 }
@@ -76,7 +79,7 @@ export const ContainerInner = styled.div`
   max-width: 1600px;
   padding-right: 50px;
   padding-left: 50px;
-  margin: 5rem auto;
+  margin: 10rem auto;
 
   @media screen and (max-width: 991px) {
     padding-right: 30px;
@@ -86,7 +89,7 @@ export const ContainerInner = styled.div`
 
 export const Button = styled.button`
   border-radius: 4px;
-  background: ${({ primary }) => (primary ? "#b69d74" : "#1f2839")};
+  background: ${({ primary }) => (primary ? blue : "#1f2839")};
   white-space: nowrap;
   padding: ${({ buttonBig }) => (buttonBig ? "14px 24px" : "10px 20px")};
   color: #fff;
@@ -98,12 +101,13 @@ export const Button = styled.button`
   &:hover {
     transition: all 0.3s ease-in-out;
     background: #fff;
-    background: ${({ primary }) => (primary ? "#968568" : "#b69d74")};
-    transform: scale(1.1);
+    background: ${({ primary }) => (primary ? blueHover : "#b69d74")};
+    transform: scale(1.01);
   }
 
   @media screen and (max-width: 960px) {
     width: 100%;
+    max-width: 35rem;
   }
 
   @media screen and (max-width: 620px) {
@@ -112,15 +116,16 @@ export const Button = styled.button`
 `;
 
 export const AltButton = styled.button`
+  display: ${({ noShowReel }) => (noShowReel ? "none" : "inline-block")};
   border-radius: 4px;
   font-weight: bold;
   background: transparent;
   white-space: nowrap;
   padding: ${({ buttonBig }) => (buttonBig ? "14px 28px" : "10px 20px")};
-  color: #b69d74;
+  color: ${grey};
   font-size: ${({ buttonFontBig }) => (buttonFontBig ? "22px" : "16px")};
   outline: none;
-  border: 2px solid #b69d74;
+  border: 2px solid ${blue};
   cursor: pointer;
 
   &:hover {
@@ -141,7 +146,7 @@ export const SectionHeading = styled.div`
 
 export const SectionHeadingTitle = styled.h2`
   font-size: 3.5rem;
-  color: ${({ whiteTitle }) => (whiteTitle ? "#fff" : "#192236")};
+  color: ${({ whiteTitle }) => (whiteTitle ? grey : "#192236")};
   margin: 1rem 0;
   @media screen and (max-width: 620px) {
     font-size: 3rem;
@@ -150,63 +155,72 @@ export const SectionHeadingTitle = styled.h2`
 export const SectionHeadingSubTitle = styled.h5`
   font-size: 2rem;
   font-weight: 600;
-  color: ${({ goldTitle }) => (goldTitle ? "#b69d74" : "#192236")};
+  color: ${({ goldTitle }) => (goldTitle ? blue : "#192236")};
 `;
 export const Underline = styled.div`
   width: 10rem;
   height: 0.3rem;
-  background: ${({ goldUnderline }) => (goldUnderline ? "#b69d74" : "#192236")};
+  background: ${({ goldUnderline }) => (goldUnderline ? blue : "#192236")};
   margin: 0.5rem auto;
   transition: all 0.5s linear;
 `;
 
+export const ErrorMessage = styled.span`
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  color: crimson;
+  font-size: 1.2rem;
+  font-weight: bold;
+`;
+
 export const Mail = styled(FaEnvelope)`
-  color: #b69d74;
+  color: ${grey};
   font-size: 2rem;
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: rgba(182, 157, 116, 0.6);
+    color: ${blue};
   }
   @media screen and (max-width: 620px) {
     margin: 0 1rem;
   }
 `;
 export const Phone = styled(FaPhoneSquare)`
-  color: #b69d74;
+  color: ${grey};
   font-size: 2rem;
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: rgba(182, 157, 116, 0.6);
+    color: ${blue};
   }
   @media screen and (max-width: 620px) {
     margin: 0 1rem;
   }
 `;
 export const Facebook = styled(FaFacebook)`
-  color: #b69d74;
+  color: ${grey};
   font-size: 2rem;
   margin: 0 1rem;
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: rgba(182, 157, 116, 0.6);
+    color: ${blue};
   }
 `;
 export const Instagram = styled(FaInstagram)`
-  color: #b69d74;
+  color: ${grey};
   font-size: 2rem;
   margin: 0 1rem;
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: rgba(182, 157, 116, 0.6);
+    color: ${blue};
   }
 `;
 export const Youtube = styled(FaYoutube)`
-  color: #b69d74;
+  color: ${grey};
   font-size: 2rem;
   margin: 0 1rem;
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: rgba(182, 157, 116, 0.6);
+    color: ${blue};
   }
 `;
 
