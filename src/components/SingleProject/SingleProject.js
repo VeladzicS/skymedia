@@ -33,10 +33,10 @@ const SingleProject = ({
   return (
     <ContainerInner>
       <SingleProjectBox imgStart={imgStart}>
-        <SingleProjectLeft data-aos="fade-right">
+        <SingleProjectLeft data-aos="fade-up">
           <img src={img} alt="Logo" />
         </SingleProjectLeft>
-        <SingleProjectRight data-aos="fade-left">
+        <SingleProjectRight data-aos="fade-up">
           <SingleProjectRightSubTitle goldColor={goldColor}>
             {translate(subTitle)}
           </SingleProjectRightSubTitle>

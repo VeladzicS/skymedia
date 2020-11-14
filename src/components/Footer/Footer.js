@@ -42,7 +42,7 @@ const Footer = (buttonBig) => {
       </FooterContact>
       <FooterLinksContainer>
         <FooterLinksWrapper>
-          <FooterLinksItems data-aos="fade-left">
+          <FooterLinksItems data-aos="fade-down">
             <FooterLinkTitle>{translate("footer.titleOne")}</FooterLinkTitle>
             <FooterLink to="/about"> {translate("footer.link1")}</FooterLink>
             <FooterLink to="/portfolio">{translate("footer.link2")}</FooterLink>
@@ -54,7 +54,7 @@ const Footer = (buttonBig) => {
             <FooterLink to="/terms"> {translate("footer.link5")}</FooterLink>
             <FooterLink to="/#"> {translate("footer.link6")} </FooterLink>
           </FooterLinksItems>
-          <FooterLinksItems data-aos="fade-right">
+          <FooterLinksItems data-aos="fade-down">
             <FooterLinkTitle>{translate("footer.titleThree")}</FooterLinkTitle>
             <FooterNormalLink
               href="https://www.youtube.com/watch?v=sJyyzwHO4u4&feature=emb_logo&ab_channel=SKYMEDIA"

@@ -15,7 +15,7 @@ export const homeObjOne = {
   topLine: "home.topline",
   img: require("../../assets/images/home/slider1.json"),
   alt: "Landing page image.",
-  noMobile: false,
+  noMobile: true,
   start: "",
   small: true,
   relative: true,

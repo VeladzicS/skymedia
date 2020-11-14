@@ -26,7 +26,7 @@ const Services = ({ whiteTitle, goldTitle }) => {
   }, []);
   return (
     <ServicesContainer>
-      <SectionHeading data-aos="fade-down">
+      <SectionHeading data-aos="fade-up">
         <SectionHeadingSubTitle goldTitle={goldTitle}>
           {translate("services.title")}
         </SectionHeadingSubTitle>
@@ -41,7 +41,7 @@ const Services = ({ whiteTitle, goldTitle }) => {
           <ServiceBoxTitle>{translate("services.dizajnTitle")}</ServiceBoxTitle>
           <ServiceBoxDesc>{translate("services.dizajnText")}</ServiceBoxDesc>
         </ServiceBox>
-        <ServiceBox data-aos="fade-down">
+        <ServiceBox data-aos="fade-up">
           <ShopIcon />
           <ServiceBoxTitle>{translate("services.shopTitle")}</ServiceBoxTitle>
           <ServiceBoxDesc>{translate("services.shopText")}</ServiceBoxDesc>
@@ -51,7 +51,7 @@ const Services = ({ whiteTitle, goldTitle }) => {
           <ServiceBoxTitle>{translate("services.visualTitle")}</ServiceBoxTitle>
           <ServiceBoxDesc>{translate("services.visualText")}</ServiceBoxDesc>
         </ServiceBox>
-        <ServiceBox data-aos="fade-down">
+        <ServiceBox data-aos="fade-up">
           <MarketingIcon />
           <ServiceBoxTitle>
             {translate("services.digitalTitle")}
@@ -63,7 +63,7 @@ const Services = ({ whiteTitle, goldTitle }) => {
           <ServiceBoxTitle> {translate("services.videoTitle")}</ServiceBoxTitle>
           <ServiceBoxDesc>{translate("services.videoText")}</ServiceBoxDesc>
         </ServiceBox>
-        <ServiceBox data-aos="fade-down">
+        <ServiceBox data-aos="fade-up">
           <SupportIcon />
           <ServiceBoxTitle>
             {translate("services.podrskaTitle")}

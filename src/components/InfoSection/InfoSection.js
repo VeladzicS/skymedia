@@ -7,6 +7,8 @@ import translate from "../../providers/i18n/translate";
 import { YouTubeShare } from "../index";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import aboutImageMobile from "../../assets/images/mobile/mobileone.jpg";
+
 import {
   InfoSec,
   InfoSecBcg,
@@ -94,7 +96,6 @@ const InfoSection = ({
                       buttonBig={buttonBig}
                       buttonFontBig={buttonFontBig}
                       primary={primary}
-                      data-aos="fade-up"
                     >
                       {translate(buttonLabel)}
                     </Button>
@@ -109,20 +110,28 @@ const InfoSection = ({
             </InfoColumn>
             <InfoColumn>
               <ImgWrapper start={start} noMobile={noMobile}>
-                <Player
-                  autoplay
-                  loop
-                  src={img}
-                  style={{
-                    height: size > 1459 ? "100%" : "80%",
-                    width: size > 1459 ? "100%" : "80%",
-                    border: 0,
-                    verticalAlign: "middle",
-                    display: "inline-block",
-                    maxHeight: "650px",
-                    paddingRight: 0,
-                  }}
-                />
+                {size > 960 ? (
+                  <Player
+                    autoplay
+                    loop
+                    src={img}
+                    style={{
+                      height: size > 1459 ? "100%" : "80%",
+                      width: size > 1459 ? "100%" : "80%",
+                      border: 0,
+                      verticalAlign: "middle",
+                      display: "inline-block",
+                      maxHeight: "650px",
+                      paddingRight: 0,
+                    }}
+                  />
+                ) : (
+                  <img
+                    src={aboutImageMobile}
+                    alt="Picture of robot and human together"
+                    data-aos="fade-up"
+                  />
+                )}
               </ImgWrapper>
             </InfoColumn>
           </InfoRow>

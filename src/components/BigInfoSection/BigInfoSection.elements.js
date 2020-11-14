@@ -15,6 +15,15 @@ export const HeroWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 960px) {
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 0.5rem 0.5rem 0.6rem #000;
+    }
+  }
 `;
 
 export const SectionDescription = styled.div`

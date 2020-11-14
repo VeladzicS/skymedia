@@ -35,9 +35,11 @@ const CallToActionSec = ({
         </SectionHeadingTitle>
       </SectionHeading>
 
-      <SectionDescription data-aos="fade-up">
-        <SectionText>{translate(sectionText)}</SectionText>
-        <SectionText>{translate(sectionTextTwo)}</SectionText>
+      <SectionDescription>
+        <SectionText data-aos="fade-up">{translate(sectionText)}</SectionText>
+        <SectionText data-aos="fade-up">
+          {translate(sectionTextTwo)}
+        </SectionText>
         <YouTubeShare
           primary={true}
           src={"https://www.youtube.com/embed/_8gHHBlbziw"}

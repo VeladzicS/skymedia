@@ -59,7 +59,7 @@ const Projects = ({ goldTitle, buttonBig, buttonFontBig, primary }) => {
               slidesPerView: 3,
             },
           }}
-          data-aos="fade-right"
+          data-aos="fade-down"
         >
           <SwiperSlide>
             <SlideContent>

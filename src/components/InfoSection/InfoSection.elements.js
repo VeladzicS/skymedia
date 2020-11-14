@@ -47,6 +47,7 @@ export const InfoRow = styled.div`
 
   @media screen and (max-width: 960px) {
     text-align: center;
+    padding: 2rem 0;
   }
 `;
 
@@ -63,6 +64,7 @@ export const InfoColumn = styled.div`
     flex-basis: 100%;
     display: flex;
     justify-content: center;
+    margin: 2rem 0;
   }
 `;
 
@@ -149,6 +151,13 @@ export const ImgWrapper = styled.div`
   @media screen and (max-width: 960px) {
     display: ${({ noMobile }) => (noMobile ? "none" : "block")};
     text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 0.5rem 0.5rem 0.6rem #000;
+    }
   }
 `;
 
