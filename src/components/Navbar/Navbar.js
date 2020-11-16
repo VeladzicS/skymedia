@@ -61,16 +61,24 @@ const Navbar = () => {
 
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                <NavLinks to="/">{translate("menu.one")}</NavLinks>
+                <NavLinks to="/" activeClassName="is-active" exact={true}>
+                  {translate("menu.one")}
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/about">{translate("menu.two")}</NavLinks>
+                <NavLinks to="/about" activeClassName="is-active">
+                  {translate("menu.two")}
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/portfolio">{translate("menu.three")}</NavLinks>
+                <NavLinks to="/portfolio" activeClassName="is-active">
+                  {translate("menu.three")}
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/contact">{translate("menu.four")}</NavLinks>
+                <NavLinks to="/contact" activeClassName="is-active">
+                  {translate("menu.four")}
+                </NavLinks>
               </NavItem>
               <NavItemLang>
                 <LangSwitcher />

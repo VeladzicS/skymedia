@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ThemeColors } from "../../theme";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Container } from "../../globalStyles";
 
 const { blue, blueHover } = ThemeColors;
@@ -30,7 +30,7 @@ export const NavbarContainer = styled(Container)`
   ${Container}
 `;
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled(NavLink)`
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -78,11 +78,8 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   height: 80px;
-  border-bottom: 2px solid transparent;
+
   transition: all 0.5s ease;
-  &:hover {
-    border-bottom: 2px solid ${blue};
-  }
 
   @media screen and (max-width: 960px) {
     width: 100%;
@@ -106,7 +103,7 @@ export const NavItemLang = styled.li`
   }
 `;
 
-export const NavLinks = styled(Link)`
+export const NavLinks = styled(NavLink)`
   letter-spacing: 0.6px;
   color: #fff;
   display: flex;
@@ -116,17 +113,20 @@ export const NavLinks = styled(Link)`
   height: 100%;
   font-size: 15px;
   font-weight: 600;
-
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+  &:hover {
+    color: ${blueHover};
+    border-bottom: 2px solid ${blue};
+  }
   @media screen and (max-width: 960px) {
     color: #fff;
     text-align: center;
     padding: 2rem;
     width: 100%;
     display: table;
-
     &:hover {
-      color: ${blueHover};
-      transition: all 0.3s ease;
+      border-bottom: 2px solid transparent;
     }
   }
 `;
@@ -141,7 +141,7 @@ export const NavItemBtn = styled.li`
   }
 `;
 
-export const NavBtnLink = styled(Link)`
+export const NavBtnLink = styled(NavLink)`
   display: flex;
   justify-content: center;
   align-items: center;

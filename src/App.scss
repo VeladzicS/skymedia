@@ -7,3 +7,12 @@
 .infoBoxActive {
   background: #263043 !important;
 }
+
+.is-active {
+  color: #2c96d1 !important;
+  border-bottom: 2px solid #39abea !important;
+
+  @media screen and (max-width: 960px) {
+    border-bottom: 2px solid transparent !important;
+  }
+}
